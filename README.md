@@ -39,9 +39,26 @@ To use this with Claude Desktop, add the following to your `claude_desktop_confi
 ```json
 {
   "mcpServers": {
-    "expense-tracker": {
-      "command": "node",
-      "args": ["/path/to/your/project/build/index.js"]
+    "ExpenseTracker": {
+      "command": "absolute path to uv",
+      "args": [
+        "run",
+        "--with",
+        "fastmcp",
+        "fastmcp",
+        "run",
+        "absolute path to main mcp file"
+      ],
+      "env": {
+        "PATH": "Path to nodejs (Optional, if not already in system PATH)"
+      },
+      "transport": "stdio",
+      "type": null,
+      "cwd": null,
+      "timeout": null,
+      "description": null,
+      "icon": null,
+      "authentication": null
     }
   }
 }
